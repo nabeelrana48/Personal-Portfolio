@@ -337,7 +337,7 @@ nav {
     background-color: #CD1818;
 }
 
-.portfolio>a {
+.portfolio>a, .contact-left>a {
     color: white;
     text-decoration: none;
 }
