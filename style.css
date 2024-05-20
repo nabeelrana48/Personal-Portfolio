@@ -1,0 +1,493 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    margin: auto 0;
+}
+
+.nav-menu i {
+    display: none;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul li {
+    list-style: none;
+    margin: 0 2vw;
+    font-size: 20px;
+    /* font-weight: 500; */
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-menu ul li a::after {
+    content: "";
+    background-color: #CD1818;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+.nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.home {
+    /* padding: 5% 20%; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(images/background-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .home-left {
+    color: white;
+    flex-basis: 50%;
+    margin-top: 5rem;
+}
+
+.home .home-left p {
+    /* margin-bottom: 1rem; */
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.home .home-left h2 {
+    /* margin-bottom: 1rem; */
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+}
+
+.home .home-left h2 span {
+    color: #CD1818;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    margin: 0 5%;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    width: 40%;
+    margin: 1rem;
+}
+
+.about-left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.about-right {
+    width: 50%;
+    margin: 1rem;
+    color: #b3b3b3;
+    font-size: 18px;
+}
+
+.about-right h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.about-right p {
+    text-align: start;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.about-right .about-tabs {
+    display: flex;
+}
+
+.about-right .about-tabs .about-tab {
+    /* display: inline-block; */
+    list-style: none;
+    margin: 0.5rem 2.5rem 0.5rem 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.about-right .about-tabs .about-tab::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #CD1818;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s;
+}
+
+.about-tabs .about-tab.active-tab::after {
+    width: 50%;
+}
+
+.about-contents {
+    margin: 1rem 0;
+    display: none;
+}
+
+.active-contents {
+    display: block;
+}
+
+.about-contents .about-content {
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    list-style: none;
+}
+
+.about-contents .about-content span {
+    color: #CD1818;
+}
+
+.services {
+    margin: 5% 10%;
+}
+
+.services h1 {
+    margin: 2rem;
+    font-size: 3rem;
+}
+
+.services-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.services .box {
+    width: 320px;
+    padding: 2rem 2.5rem;
+    border-radius: 0.5rem;
+    background-color: #1c1c1c;
+    transition: all 0.3s;
+    border: 0.5px solid #CD1818;
+    margin: 1rem;
+}
+
+.services .box:hover {
+    background-color: #CD1818;
+    transform: translateY(-15px);
+}
+
+.services .box:hover i,
+.services .box:hover a {
+    color: white;
+}
+
+.services .box i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #CD1818;
+}
+
+.services .box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.services .box p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.services .box a {
+    text-decoration: none;
+    color: white;
+    color: #CD1818;
+}
+
+.portfolio {
+    margin: 10%;
+}
+
+.portfolio h1 {
+    margin: 2rem;
+    font-size: 3rem;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.work {
+    width: 320px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+.work .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #CD1818);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15%;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.layer h3 {
+    margin-bottom: 1rem;
+}
+
+.layer a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.layer a i {
+    color: #CD1818;
+}
+
+.btn {
+    margin: 2rem auto;
+    display: block;
+    padding: 1rem 3rem;
+    border-radius: 0.3rem;
+    color: white;
+    background: transparent;
+    border: 2px solid #CD1818;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #CD1818;
+}
+
+.portfolio>a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact {
+    margin: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-left {
+    width: 400px;
+}
+
+.contact-left h1 {
+    margin: 2rem;
+    font-size: 3rem;
+}
+
+.contact-left div {
+    margin: 2rem;
+    font-size: 1.4rem;
+    color: #b3b3b3;
+}
+
+.contact-left .email i,
+.contact-left .phone i {
+    color: #CD1818;
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+}
+
+.contact-left .social-icons i {
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+    color: #b3b3b3;
+}
+
+.contact-left .btn {
+    margin: 2rem;
+}
+
+.contact-left .btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-right {
+    width: 500px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    margin: 0.7rem 0.5rem;
+    padding: 1rem;
+    background-color: #1c1c1c;
+    border-radius: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    border: none;
+    color: white;
+}
+
+.contact .btn {
+    background-color: #CD1818;
+}
+
+.contact .btn:hover {
+    background-color: #c73e3e;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #1c1c1c;
+    padding: 1rem 0;
+}
+
+.copyright i {
+    color: #CD1818;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .nav-menu i {
+        display: block;
+        font-size: 25px;
+    }
+    .nav-menu ul {
+        background-color: #CD1818;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        display: block;
+        padding-top: 50px;
+        z-index: 20;
+        transition: right 0.5s;
+    }
+    .nav-menu ul li{
+        margin: 25px;
+    }
+    .nav-menu ul .fa-xmark{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .nav-menu .fa-bars{
+        padding-right: 25px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        padding: 0 0%;
+    }
+    .about-right h1{
+        font-size: 2.5rem;
+    }
+}
+@media only screen and  (max-width: 1150px) {
+    .about{
+        padding: 5% 1%;
+        margin: 0 1%
+    }
+    .about-left{
+        width: 350px;
+        margin: 0.5rem
+    }
+    .about-right{
+        width: 450px;
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    nav {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (min-width: 1390px) {
+    .services .box,
+    .work {
+        width: 340px;
+    }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabeel's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/46b2f01f82.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="images/logo-1.png" alt="">
+            </div>
+            <div class="nav-menu">
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="home">
+        <div class="home-left">
+            <p>Web Developer</p>
+            <h2>Hi, I'm <span>Nabeell</span><br>
+                A Front-End Developer. </h2>
+        </div>
+        <div class="home-right">
+            <!-- <img src="images/background.png" alt=""> -->
+        </div>
+    </div>
+    <div id="about" class="about">
+        <div class="about-left">
+            <img src="images/user-1.png " alt="">
+        </div>
+        <div class="about-right">
+            <h1>About Me</h1>
+            <p>Hello! I'm <strong>Muhammad Nabeel Rana</strong>, a passionate front-end web developer with nearly a year of hands-on experience in creating interactive and user-friendly web applications. I thrive on turning creative ideas into functional and aesthetically pleasing digital experiences.</p>
+            <ul class="about-tabs">
+                <li class="about-tab active-tab" onclick="openTab('skills')">Skills</li>
+                <li class="about-tab" onclick="openTab('experience')">Experience</li>
+                <li class="about-tab" onclick="openTab('education')">Education</li>
+                <li class="about-tab" onclick="openTab('certifications')">Certifications</li>
+            </ul>
+
+            <ul id="skills" class="about-contents active-contents">
+                <li class="about-content">
+                    <span>Languages</span><br> Proficient in HTML5, CSS3, JavaScript (ES6+)
+                </li>
+                <li class="about-content">
+                    <span>Frameworks/Libraries</span><br>Experience with React.js, Bootstrap.
+                </li>
+                <li class="about-content">
+                    <span>Responsive Design</span><br>Creating responsive websites with media queries for all devices.
+                </li>
+            </ul>
+            <ul id="experience" class="about-contents">
+                <li class="about-content">
+                    <span>July 2023 - Present</span><br> Front-End Developer at DueClix
+                </li>
+                <li class="about-content">
+                    <span>July 2022 - Sep 2022</span><br>Reservation Ticketing Agent at Quality Aviation Pvt Ltd.
+                </li>
+                <li class="about-content">
+                    <span>June 2019 - July 2021</span><br>
+                    Document Processing Executive at Systems Limited
+                </li>
+            </ul>
+            <ul id="education" class="about-contents">
+                <li class="about-content">
+                    <span>BS in Aviation Management</span><br>PAF-KIET University
+                    <!-- <span>2022</span><br>BS in Aviation Management From PAF-KIET University -->
+                </li>
+                <li class="about-content">
+                    <span>Intermediate - Pre Engineering</span><br>Bahria College Karsaz
+                    <!-- <span>2016</span><br>ntermediate - Pre Engineering from Bahria College Karsaz -->
+                </li>
+                <li class="about-content">
+                    <span>Matriculation - Computer Science</span><br>Royal Grammar School
+                    <!-- <span>2014</span><br>Matriculation - Computer Science - Royal Grammar School -->
+                </li>
+            </ul>
+            <ul id="certifications" class="about-contents">
+                <li class="about-content">
+                    <span>CIT (Web Development)</span><br>BS Aptech Shahrah e Faisal
+                </li>
+                <li class="about-content">
+                    <span>Web Designing</span><br> Aptech Shahrah e Faisal
+                </li>
+                <li class="about-content">
+                    <span>SEO (Search Engine Optimization)</span><br>5iCreations
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="services" class="services">
+        <h1>My Services</h1>
+        <div class="services-boxes">
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-code"></i>
+                <h3>Responsive Web Design</h3>
+                <p>Specializing in creating visually appealing and user-friendly websites that adapt seamlessly to various devices and screen sizes. Using a combination of HTML, CSS, and Bootstrap, I ensure an optimal viewing experience for all users.</p>
+                <a href="#portfolio">Explore Portfolio</a>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-crop-simple"></i>
+                <h3>Front-End Web Development</h3>
+                <p>Crafting captivating and interactive user interfaces using the latest technologies such as HTML5, CSS3, JavaScript, and frameworks like Bootstrap. I focus on creating engaging web experiences that align with your brand and goals.</p>
+                <a href="#portfolio">View Projects</a>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-palette"></i>
+                <h3> Logo Design</h3>
+                <p>Offering professional logo design services to establish a strong brand identity. From concept development to final design, I create custom logos that reflect your brand's essence and values, leaving a lasting impression on your audience.</p>
+                <a href="https://dribbble.com/nabeelrana48" target="_blank">See Logos</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="portfolio">
+        <h1>My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png" alt="Work Details">
+                <div class="layer">
+                    <h3>Bingo Site Clone</h3>
+                    <p>I recreated a full-featured website using HTML, CSS, JavaScript, and Bootstrap. This project is fully responsive and works seamlessly on all devices.</p>
+                    <a href="https://bingo-site-clone.vercel.app/" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" alt="Work Details">
+                <div class="layer">
+                    <h3>Analog Clock</h3>
+                    <p>I developed an Analog Clock using HTML, CSS, and JavaScript. This project showcases a functional and stylish clock interface, highlighting my skills in front-end development.</p>
+                    <a href="https://analog-clock-using-html-css-and-js.vercel.app/" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" alt="Work Details">
+                <div class="layer">
+                    <h3>Website Theme Clone</h3>
+                    <p>I created this website theme clone using HTML, CSS, JavaScript, and Bootstrap. It demonstrates my ability to replicate complex website designs.</p>
+                    <a href="https://theme-clone-using-html-css-js-and-bootstrap.vercel.app/" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="mywork.html"><button class="btn">See More</button></a>
+    </div>
+
+    <div id="contact" class="contact">
+        <div class="contact-left">
+            <h1>Contact Me</h1>
+            <div class="email">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>nabeelrana48@gmail.com</span>
+            </div>
+            <div class="phone">
+                <i class="fa-solid fa-square-phone"></i>
+                <span>0335-35019370</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/nabeellrana/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nabeellrana/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/nabeelrana48" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/nabeelrana48" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <button class="btn"><a href="M. Nabeel Rana - [Resume].pdf" download>Download CV</a></button>
+        </div>
+
+        <div class="contact-right">
+            <form action="" name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name">
+                <input type="email" name="Email" placeholder="Your Email">
+                <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <span id="messageSent"></span>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright &copy; Nabeell. Made with <i class="fa-solid fa-heart"></i> by M. Nabeel Rana.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
