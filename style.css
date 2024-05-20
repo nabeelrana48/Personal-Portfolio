@@ -146,7 +146,6 @@ nav {
 .about-right p {
     text-align: start;
     margin-bottom: 1rem;
-    font-size: 18px;
 }
 
 .about-right .about-tabs {
@@ -255,6 +254,7 @@ nav {
 .portfolio {
     margin: 10%;
 }
+
 
 .portfolio h1 {
     margin: 2rem;
@@ -454,6 +454,18 @@ nav {
         padding-right: 25px;
         font-size: 25px;
     }
+    .home{
+        background-image: url(images/phone-background-1.png);
+    }
+    .about-right{
+        font-size: 16px;
+    }
+    .about-right .about-tabs .about-tab {
+        margin: 0.5rem 1rem 0.5rem 0;
+    }
+    .about-right .about-tabs .about-tab:last-child{
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -476,6 +488,10 @@ nav {
     .about-right{
         width: 450px;
         margin: 0.5rem;
+    }
+    
+    .mywork{
+        margin-top: 20%;
     }
 }
 
